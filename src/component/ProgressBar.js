@@ -9,7 +9,7 @@ const ProgressBar = ({ file, setFile }) => {
         if (url) {
             setFile(null);
         }
-    }, [url, setFile]);
+    }, [url, setFile]); 
 
     return (
         <motion.div 
