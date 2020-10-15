@@ -2,15 +2,17 @@ import * as firebase from 'firebase/app';
 import 'firebase/storage';
 import 'firebase/firestore';
 
+const { FIREBASE_KEY, FIREBASE_BUCKET, FIREBASE_APPID } = process.env; 
+
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyDyoI70H0vfI9JCeTxu3zzk8TnHl69ktQo",
+    apiKey: FIREBASE_KEY,
     authDomain: "xiexuc-mygallery.firebaseapp.com",
     databaseURL: "https://xiexuc-mygallery.firebaseio.com",
     projectId: "xiexuc-mygallery",
-    storageBucket: "xiexuc-mygallery.appspot.com",
+    storageBucket: FIREBASE_BUCKET,
     messagingSenderId: "399983928342",
-    appId: "1:399983928342:web:80684166cdba4692a24137"
+    appId: FIREBASE_APPID
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
